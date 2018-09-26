@@ -12,8 +12,10 @@ import amazonviewer.model.Serie;
 import amazonviewer.model.Chapter;
 import amazonviewer.model.Magazine;
 import amazonviewer.util.AmazonUtil;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
+import makereport.Report;
 
 /**
  *
@@ -268,10 +270,37 @@ public class Amazonviewer {
     /*Las siguientes metodos es un ejemplo de Sobrecarga de métodos
     2 metodos con el mismo nombre pero una recibe un parametro*/
     public static void makeReport() {
-
+        Report report = new Report();
+        report.setNameFile("Reporte");
+        report.setExtension("txt");
+        report.setTitle("::: VISTAS :::");
+        
+        String contentReport = "";
+        for(Movie movie : movies){
+            if(movie.getIsViewed()){
+                contentReport += movie.toString()+"\r\n";
+            }
+        }
+        report.setContent(contentReport);
+        report.makeReport();
+        
     }
 
     public static void makeReport(Date date) {
-
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String dateString = df.format(date);
+        Report report = new Report();
+        report.setNameFile("Reporte" + dateString);
+        report.setExtension("txt");
+        report.setTitle("::: VISTAS :::");
+        
+        String contentReport = "";
+        for(Movie movie : movies){
+            if(movie.getIsViewed()){
+                contentReport += movie.toString()+"\r\n";
+            }
+        }
+        report.setContent(contentReport);
+        report.makeReport();
     }
 }
