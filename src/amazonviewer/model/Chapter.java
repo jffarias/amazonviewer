@@ -66,4 +66,21 @@ public class Chapter extends Movie {
         return chapters;
     }
     
+    //Video 7 - Curso Avanzado de Java SE
+    //Implementando métodos abstractos en Java
+    @Override
+    public void view(){
+        super.view();
+        ArrayList<Chapter> chapters = getSerie().getChapters();
+        int chapterViewedCounter = 0;
+        for(Chapter chapter : chapters){
+            if(chapter.getIsViewed()){
+                chapterViewedCounter++;
+            }
+        }
+        
+        if(chapterViewedCounter == chapters.size()){
+            getSerie().setViewed(true);
+        }
+    }
 }

@@ -89,4 +89,9 @@ public class Serie extends Film implements IVisualizable{
 		
 		return series;
 	}
+
+    @Override
+    public void view() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

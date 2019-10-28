@@ -5,10 +5,15 @@
  */
 package amazonviewer.model;
 /**
- *
+ *<h1>Film</h1>
+ * Film es una clase padre abstracta
+ * <p>
+ * Es la clase base de la familia Films, como es abstracta no se puede 
+ * instanciar y por ende contiene el método abstracto 
+ * {@code view()}
  * @author i5
  */
-public class Film {
+public abstract class Film {
     /*Mediante los modificadores de acceso podemos
     ocultar los atributos de la clase y al realizar
     esto estamos trabajando con encapsulamiento*/
@@ -73,4 +78,6 @@ public class Film {
     public void setViewed(boolean viewed) {
             this.viewed = viewed;
     }
+    //Video 5 - Clases avanzadas - Curso Avanzado de Java SE - 2019
+    public abstract void view();
 }

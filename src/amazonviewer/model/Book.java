@@ -83,4 +83,19 @@ public class Book extends Publication implements IVisualizable{
         }
         return books;
     }
+    
+     //Video 7 - Curso Avanzado de Java SE
+    //Implementando métodos abstractos en Java
+    public void view(){
+        setReaded(true);
+        Date dateI = startToSee(new Date());
+        for(int i=0; i<100000;i++){
+            System.out.println("..............");
+        }
+        //Terminamos de verla
+        stopToSee(dateI, new Date());
+        System.out.println();
+        System.out.println("Leiste :"+toString());
+        System.out.println("Por: " + getTimeReaded() + " milisegundos");
+    }
 }
