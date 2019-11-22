@@ -24,7 +24,7 @@ import makereport.Report;
  * a modo de exposición sin ser leídas.
  * @author Iesous_Flor
  * @version 1.1
- * @since   2018
+ * @since   2018 - 2019
  * 
  **/
 public class Amazonviewer {
@@ -33,10 +33,6 @@ public class Amazonviewer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-       /*Film film = new Movie("Coco", "Animation", "", 12, (short)2017);
-       film.view();*/
-        //System.out.println(movie);
         showMenu();
     }
 
